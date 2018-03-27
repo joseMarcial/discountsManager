@@ -1,6 +1,7 @@
 package com.discounts.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.discounts.service.EmployeeService;
 import com.discounts.service.api.EmployeeDiscountsResponse;
 
+@EnableCircuitBreaker
 @RestController
 @RequestMapping("/employees")
 public class EmployeeController {

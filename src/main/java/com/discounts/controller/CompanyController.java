@@ -57,7 +57,11 @@ public class CompanyController {
 		}
 	}
 	
-	
+	@RequestMapping(value = "/{companyId}/employees/{empoyeeId}", method = RequestMethod.POST , produces = "application/json", consumes="application/json")
+	public ResponseEntity<Boolean> isValidCompanyEmployee(@PathVariable  long empoyeeId, @PathVariable  long CompanyId) {
+		
+		return new ResponseEntity<Boolean >(true, HttpStatus.OK);
+	}
 	
 	
 	private boolean validateInputMappingAddEmployees(RegisterEmployeesRequest request) {
@@ -80,5 +84,7 @@ public class CompanyController {
 		
 		return (request.getId_company() == null || request.getId_discount() == null?false:true);
 	}
+	
+	
 
 }
