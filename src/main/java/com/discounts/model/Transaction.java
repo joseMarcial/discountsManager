@@ -2,9 +2,18 @@ package com.discounts.model;
 
 public class Transaction {
 	
+	
 	String id_transaction;
 	String id_company;
 	String id_discount;
+	
+	
+	public Transaction(String id_transaction, String id_company, String id_discount) {
+		super();
+		this.id_transaction = id_transaction;
+		this.id_company = id_company;
+		this.id_discount = id_discount;
+	}
 	
 	
 	public String getId_transaction() {

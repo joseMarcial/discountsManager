@@ -19,6 +19,14 @@ public class Discount {
 	String description;
 	
 	
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
 	public Discount(int id_discount, DiscountType type, String description) {
 		super();
 		this.id_discount = id_discount;
